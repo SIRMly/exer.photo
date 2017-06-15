@@ -4,7 +4,7 @@
  */
 ;(function ($){
     var click = "ontouchstart" in document ? "touchstart" : "click";
-    document.addEventListener("ontouchmove", function (e){
+    document.addEventListener('touchmove', function (e) {
         e.preventDefault();
     });
     var winW = $(window).width();
