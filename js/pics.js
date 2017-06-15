@@ -4,6 +4,9 @@
  */
 ;(function ($){
     var click = "ontouchstart" in document ? "touchstart" : "click";
+    document.addEventListener("ontouchmove", function (e){
+        e.preventDefault();
+    });
     var winW = $(window).width();
     var winH = $(window).height();
     photoAlumb();
@@ -14,15 +17,15 @@
         photoWrapper.width(winW*lis.length);
         lis.width(winW);
         console.log(imgs.length);
-        for(var i=0; i<imgs.length; i++){
-            var imgPaddimg = Math.floor((winH - imgs.eq(i).height())/2);
-            console.log(imgPaddimg);
-            if(imgPaddimg > 0){
-                imgs.eq(i).css({
-                    "margin-top": imgPaddimg
-                });
-            }
-        }
+        //for(var i=0; i<imgs.length; i++){
+        //    var imgPaddimg = Math.floor((winH - imgs.eq(i).height())/2);
+        //    console.log(imgPaddimg);
+        //    if(imgPaddimg > 0){
+        //        imgs.eq(i).css({
+        //            "margin-top": imgPaddimg
+        //        });
+        //    }
+        //}
         /*==»¬¶¯==*/
         var presentImg = 1;
         var translateX = 0;
